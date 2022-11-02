@@ -10,5 +10,5 @@ Teste para o processo seletivo
 
 ## Pastas:
 <b>/</b>: Raiz do projeto (teste backend) </br>
-<b>Frontend:</b> Teste frontend
+<b>frontend:</b> Teste frontend
 
