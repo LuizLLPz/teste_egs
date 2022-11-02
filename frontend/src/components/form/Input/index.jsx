@@ -11,6 +11,7 @@ const Input = ({labelText, inputType, placeholder, changeValue}) => {
             <input className="form_input__field" 
                    type={inputType}
                    required
+                   name={labelText}
                    value={value}
                    onChange={(e) => {
                        setValue(e.target.value);
