@@ -6,7 +6,7 @@
 
 .form_input__label {
     color: var(--text-primary);
-    font: normal normal 500 14px sans-serif;
+    font: normal normal 400 14px Roboto;
 }
 
 .form_input__field {
@@ -20,7 +20,7 @@
 
 .form_input__field::placeholder {
     color: var(--text-form);
-    font: normal normal bold 12px sans-serif; 
+    font: normal normal bold 12px Roboto; 
 }
 
 

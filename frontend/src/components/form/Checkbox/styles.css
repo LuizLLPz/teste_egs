@@ -1,9 +1,16 @@
+.form_checkbox {    
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
 .form_checkbox__label {
     color: var(--text-primary);
-    font: normal normal 300 12px Roboto;
+    font: normal normal 300 10px Roboto;
 }
 
 .form_checkbox__field {
-    margin-top: 10px;
-    background: pink;
+    background-color: red;
 }

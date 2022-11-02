@@ -7,8 +7,8 @@ const Input = ({labelText, inputType, placeholder}) => {
                 {labelText}
             </label>
             <input className="form_input__field" 
-                type={inputType}
-                placeholder={placeholder}
+                   type={inputType}
+                   placeholder={placeholder}
             />
         </div>
     );
