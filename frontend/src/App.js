@@ -4,7 +4,20 @@ import Checkbox from "./components/form/Checkbox";
 import FormSubmit from "./components/form/FormSubmit";
 
 function App() {
-  return (
+    let users = localStorage.getItem('users');
+    if (users != null) {
+        users = JSON.parse(users);
+    }
+    
+    const submitUser = (e) => {
+        e.preventDefault()
+        alert("Enviandoo");
+        JSON.stringify('user');
+        users.push('user');
+        localStorage.setItem('users', JSON.stringify(users));
+    }
+    
+    return (
     <div className="App">
         <div className="main_container">
             <div className="image_container">
@@ -12,10 +25,7 @@ function App() {
             </div>
             <div className="form_container">
                 <form className="form" 
-                    onSubmit="() => {
-                                event.preventDefault;
-                                submitUser;
-                    }">
+                    onSubmit="submitUser">
                     
                     <Heading main="TESTE" secondary="EGS SISTEMAS"></Heading>
                     
@@ -40,7 +50,7 @@ function App() {
                     </Input>
                     
                     <Input labelText="CPF:"
-                            inputType="number"
+                            inputType="text"
                             placeholder="Escreva seu CPF">
                     </Input>
                     
@@ -48,7 +58,7 @@ function App() {
 
                     <div className="center">
                         <FormSubmit>
-                        Enviar
+                        ENVIAR
                         </FormSubmit>
                     </div>
                     
