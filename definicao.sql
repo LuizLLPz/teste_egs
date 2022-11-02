@@ -1,5 +1,6 @@
-
-CREATE DATABASE Teste;
+use Master;
+drop database if exists Teste;
+create database Teste;
 
 use Teste;
 
@@ -13,7 +14,7 @@ create table Pedido (
 
 create table Produto (
                          id int primary key,
-                         nome varchar,
+                         nome varchar(70),
                          valor float
 );
 
