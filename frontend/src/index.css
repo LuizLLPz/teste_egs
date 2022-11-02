@@ -3,7 +3,7 @@
 :root {
   --text-primary: white;
   --text-form: #92A5B5;
-  --gradient-primary: linear-gradient(to right bottom, #2EE2B7, #38CDEB);
+  --gradient-primary: linear-gradient(to right bottom, #25E7BC, #38CDEB);
 }
 
 body {
@@ -12,6 +12,7 @@ body {
 
 .center {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
