@@ -8,9 +8,25 @@
 
 .form_checkbox__label {
     color: var(--text-primary);
+    margin: 0 10px;
     font: normal normal 300 10px Roboto;
 }
 
-.form_checkbox__field {
-    background-color: red;
+.form_checkbox__input {
+    width: 14px !important;
+    height: 14px !important;
+    appearance: none;
+    outline: 1px solid gray;
+    box-shadow: none;
+    font-size: 0.8em;
+    text-align: center;
+    line-height: 1em;
+    background: none;
 }
+
+input[type='checkbox']:checked:after {
+    content: '✔';
+    color: #14C88B;
+}
+
+.form_checkbox__input:focus { outline: 1px solid #1df6ff; }

@@ -2,16 +2,10 @@ import './styles.css';
 
 const Checkbox = ({labelText}) => {
     return (
-        <div className="form_checkbox">
-            <label className="form_checkbox__label">
-                {labelText}
-            </label>
-            
-            <input className="form_checkbox__field"
-                   type="checkbox"
-                   required
-            />
-        </div>
+        <label className="form_checkbox">
+            <span className="form_checkbox__label">Aceito os termos e condições</span>
+            <input type="checkbox" className="form_checkbox__input" required/>
+        </label>  
     );
 }
 export default Checkbox;
