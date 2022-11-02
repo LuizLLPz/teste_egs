@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from "react";
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route
+} from "react-router-dom";
+import Home from "./views/Home";
+import Users from "./views/Users";
 
 function App() {
-  return (
+    const [users, setUsers] = useState(localStorage.getItem("users")
+        ? JSON.parse(localStorage.getItem("users")) : []);
+    
+    const enviarUsuario = (user) => {
+        console.log(user);
+        setUsers([...users, user]);
+        localStorage.setItem('user', JSON.stringify(user));
+        localStorage.setItem('users', JSON.stringify([...users, user]));
+    }
+    
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Projeto do teste
-        </a>
-      </header>
+        <Router>
+            <Routes>
+                <Route path="/" element={<Home enviarUsuario={(user) => enviarUsuario(user)}/>} />
+                <Route path="/users" element={<Users/>} />
+            </Routes>
+        </Router>
+      
     </div>
   );
 }

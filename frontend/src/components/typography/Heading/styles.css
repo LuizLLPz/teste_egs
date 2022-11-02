@@ -1,0 +1,18 @@
+.heading {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.heading__main, .heading__secondary { margin: auto; }
+
+.heading__main {
+    color: var(--text-primary);
+    font: normal normal 400 22px Roboto;
+}
+
+.heading__secondary {
+    color: #49B0AB;
+    font: normal normal 400 14px Roboto;
+}
