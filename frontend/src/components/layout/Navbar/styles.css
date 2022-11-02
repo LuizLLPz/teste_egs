@@ -1,0 +1,5 @@
+.navbar {
+    display: flex;
+    height: 60px;
+    background-image: var(--gradient-primary);
+}
