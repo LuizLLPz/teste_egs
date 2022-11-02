@@ -2,8 +2,9 @@ import Heading from "../../components/typography/Heading";
 import Input from "../../components/form/Input";
 import Checkbox from "../../components/form/Checkbox";
 import FormSubmit from "../../components/form/FormSubmit";
-import { link } from "react-router-dom";
+import Anchor from "../../components/typography/Anchor";
 import './styles.css';
+
 
 const Home = () => {
     return (
@@ -49,6 +50,9 @@ const Home = () => {
                         <FormSubmit>
                             ENVIAR
                         </FormSubmit>
+                        <Anchor href="/users">
+                            I'm already a member
+                        </Anchor>
                     </div>
                 </form>
             </div>
