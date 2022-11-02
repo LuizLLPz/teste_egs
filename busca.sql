@@ -4,4 +4,4 @@ SELECT * FROM Pedido ORDER BY horario;
 -- 3) Buscar os produtos com menor valor
 
 -- Ordenado
-SELECT  *  from Pedido  order by valor;
+SELECT  *  from Produto  order by valor;
