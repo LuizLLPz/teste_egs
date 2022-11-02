@@ -1,0 +1,26 @@
+
+.main_container, .image_container, .form_container { display: flex; }
+
+.image_container, .form_container {
+    width: 50%;
+    align-items: center;
+}
+
+.image_container {
+    height: 100vh;
+    justify-content: center;
+    background-image: var(--gradient-primary);
+}
+
+.form_container {
+    box-sizing: border-box;
+    height: 100vh;
+    width: 50%;
+    padding: 40px 0;
+    flex-direction: column;
+    background-color: #32425B;
+}
+
+.form {
+    width: 70%;
+}
