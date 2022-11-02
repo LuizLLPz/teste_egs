@@ -9,6 +9,7 @@ const Checkbox = ({labelText}) => {
             
             <input className="form_checkbox__field"
                    type="checkbox"
+                   required
             />
         </div>
     );

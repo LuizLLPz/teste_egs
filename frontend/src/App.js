@@ -1,3 +1,4 @@
+import {useState} from "react";
 import {
     BrowserRouter as Router,
     Routes,
@@ -7,36 +8,22 @@ import Home from "./views/Home";
 import Users from "./views/Users";
 
 function App() {
-    let users = localStorage.getItem('users');
-    if (users != null) {
-        users = JSON.parse(users);
-    }
+    const [users, setUsers] = useState(localStorage.getItem("users")
+        ? JSON.parse(localStorage.getItem("users")) : []);
     
-    const submitUser = (e) => {
-        e.preventDefault()
-        alert("Enviando");
-        JSON.stringify('user');
-        users.push('user');
-        localStorage.setItem('user', JSON.stringify('user'));
-        localStorage.setItem('users', JSON.stringify(users));
+    const enviarUsuario = (user) => {
+        console.log(user);
+        setUsers([...users, user]);
+        localStorage.setItem('user', JSON.stringify(user));
+        localStorage.setItem('users', JSON.stringify([...users, user]));
     }
     
     return (
     <div className="App">
         <Router>
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/users" element={<Users  
-                users={[{nome: "Luiz", sobrenome: "Felipe", idade: "08/10/2001",
-                        email: "l123@gmail.com", cpf: "123.456.789-10"},
-                    {nome: "Luiz", sobrenome: "Felipe", idade: "08/10/2001",
-                        email: "l123@gmail.com", cpf: "123.456.789-10"},
-                    {nome: "Luiz", sobrenome: "Felipe", idade: "08/10/2001",
-                        email: "l123@gmail.com", cpf: "123.456.789-10"},
-                    {nome: "Luiz", sobrenome: "Felipe", idade: "08/10/2001",
-                        email: "l123@gmail.com", cpf: "123.456.789-10"},
-                ]}
-                />} />
+                <Route path="/" element={<Home enviarUsuario={(user) => enviarUsuario(user)}/>} />
+                <Route path="/users" element={<Users/>} />
             </Routes>
         </Router>
       

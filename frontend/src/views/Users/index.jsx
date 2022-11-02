@@ -1,14 +1,21 @@
 import Navbar from "../../components/layout/Navbar";
 import './styles.css'
 
-const Users = ({users}) => {
+const Users = () => {
+    const users = JSON.parse(localStorage.getItem('users'));
+    const user = JSON.parse(localStorage.getItem('user'));
     return (
         <div>
             <Navbar>
                 <img src="" alt="logo" className="navbar__logo"/>
                 <div className="navbar__links">
-                    <a className="navbar__anchor">NOME</a>
-                    <a className="navbar__anchor">SOBRENOME</a>
+
+                    {user && (
+                        <>
+                            <a className="navbar__anchor">{user.nome}</a>
+                            <a className="navbar__anchor">{user.sobrenome}</a>
+                        </>
+                        )}
                 </div>
             </Navbar>
             <div className="users_container">

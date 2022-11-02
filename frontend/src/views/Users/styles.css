@@ -4,7 +4,7 @@ body {
 
 .navbar__logo {
     margin-left: 8%;
-    max-height: 50%;
+    max-height: 75%;
     max-width: 30%;
 }
 
@@ -15,7 +15,6 @@ body {
     font: normal normal normal 14px Roboto;
     margin-right: 10px;
 }
-
 .users_container { 
     padding: 30px;
 }
