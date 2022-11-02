@@ -1,0 +1,19 @@
+.heading {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.heading__main, .heading__secondary { margin: auto; }
+
+.heading__main {
+    color: var(--text-primary);
+    font: normal normal 300 24px Roboto;
+}
+
+.heading__secondary {
+    color: transparent;
+    font: normal normal 600 16px Roboto;
+    background-clip: text;
+    background-image: linear-gradient(to right bottom, #2EE2B7, #38CDEB);;
+}
