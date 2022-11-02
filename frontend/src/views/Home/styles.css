@@ -6,6 +6,8 @@
     align-items: center;
 }
 
+.image_container__logo { max-width: 40%; }
+
 .image_container {
     height: 100vh;
     justify-content: center;

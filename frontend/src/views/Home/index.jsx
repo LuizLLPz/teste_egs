@@ -5,7 +5,6 @@ import Checkbox from "../../components/form/Checkbox";
 import FormSubmit from "../../components/form/FormSubmit";
 import Anchor from "../../components/typography/Anchor";
 import './styles.css';
-
 const Home = ({enviarUsuario}) => {
     const [nome, setNome] = useState('');
     const [sobrenome, setSobrenome] = useState('');
@@ -17,7 +16,9 @@ const Home = ({enviarUsuario}) => {
         <>
         <div className="main_container">
             <div className="image_container">
-                <img src="logo" alt="logo"/>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg"
+                     className="image_container__logo"
+                     alt="logo"/>
             </div>
             <div className="form_container">
                 <form className="form"

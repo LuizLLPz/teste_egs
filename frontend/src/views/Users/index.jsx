@@ -7,7 +7,7 @@ const Users = () => {
     return (
         <div>
             <Navbar>
-                <img src="" alt="logo" className="navbar__logo"/>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="logo" className="navbar__logo"/>
                 <div className="navbar__links">
 
                     {user && (
