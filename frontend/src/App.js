@@ -5,10 +5,6 @@ import {
 } from "react-router-dom";
 import Home from "./views/Home";
 import Users from "./views/Users";
-import Heading from './components/typography/Heading';
-import Input from "./components/form/Input";
-import Checkbox from "./components/form/Checkbox";
-import FormSubmit from "./components/form/FormSubmit";
 
 function App() {
     let users = localStorage.getItem('users');
@@ -18,7 +14,7 @@ function App() {
     
     const submitUser = (e) => {
         e.preventDefault()
-        alert("Enviandoo");
+        alert("Enviando");
         JSON.stringify('user');
         users.push('user');
         localStorage.setItem('user', JSON.stringify('user'));
@@ -30,7 +26,17 @@ function App() {
         <Router>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/users" element={<Users users={users} />} />
+                <Route path="/users" element={<Users  
+                users={[{nome: "Luiz", sobrenome: "Felipe", idade: "08/10/2001",
+                        email: "l123@gmail.com", cpf: "123.456.789-10"},
+                    {nome: "Luiz", sobrenome: "Felipe", idade: "08/10/2001",
+                        email: "l123@gmail.com", cpf: "123.456.789-10"},
+                    {nome: "Luiz", sobrenome: "Felipe", idade: "08/10/2001",
+                        email: "l123@gmail.com", cpf: "123.456.789-10"},
+                    {nome: "Luiz", sobrenome: "Felipe", idade: "08/10/2001",
+                        email: "l123@gmail.com", cpf: "123.456.789-10"},
+                ]}
+                />} />
             </Routes>
         </Router>
       

@@ -1,5 +1,7 @@
 .navbar {
     display: flex;
+    padding: 0 20px;
     height: 60px;
+    align-items: center;
     background-image: var(--gradient-primary);
 }
