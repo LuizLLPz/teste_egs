@@ -1,0 +1,9 @@
+.form_checkbox__label {
+    color: var(--text-primary);
+    font: normal normal 300 12px Roboto;
+}
+
+.form_checkbox__field {
+    margin-top: 10px;
+    background: pink;
+}
